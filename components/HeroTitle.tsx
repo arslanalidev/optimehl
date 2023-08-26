@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import { useRouter } from 'next/router';
-import { Container, Grid, Text, Title } from '@mantine/core'
+import {
+    Card, Container, Grid, Text, Title,
+    Image, Badge, Button, Group, Space
+} from '@mantine/core'
 import React from 'react'
 
 export function HeroTitle() {
@@ -21,20 +24,81 @@ export function HeroTitle() {
                 </Title>
             </motion.div>
 
+            <Space h={60} />
+
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.5, ease: "easeIn" }}
             >
-                <Grid>
+                <Grid gutter={"xl"}>
                     <Grid.Col xs={12} md={6} lg={4}>
-                        <Text>Hello</Text>
+                        <Card shadow="sm" p={1} radius="md" withBorder>
+                            <Card.Section>
+                                <Image
+                                    src="/people.png"
+                                    height={160}
+                                    alt="Norway"
+                                    fit="contain"
+                                />
+                            </Card.Section>
+
+                            <Text pt={10} weight={500} align="center">Personalplanung</Text>
+
+                            <Text size="sm" color="dimmed" align="center">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+                            </Text>
+
+                            <Button variant="light" color="red" fullWidth mt="md" radius="md">
+                                Jetzt planen
+                            </Button>
+                        </Card>
                     </Grid.Col>
+
                     <Grid.Col xs={12} md={6} lg={4}>
-                        <Text>Hello</Text>
+                        <Card shadow="sm" p={1} radius="md" withBorder>
+                            <Card.Section>
+                                <Image
+                                    src="/people.png"
+                                    height={160}
+                                    alt="Norway"
+                                    fit="contain"
+                                />
+                            </Card.Section>
+
+                            <Text pt={10} weight={500} align="center">Personalplanung</Text>
+
+                            <Text size="sm" color="dimmed" align="center">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+                            </Text>
+
+                            <Button variant="light" color="red" fullWidth mt="md" radius="md">
+                                Jetzt planen
+                            </Button>
+                        </Card>
                     </Grid.Col>
+
                     <Grid.Col xs={12} md={6} lg={4}>
-                        <Text>Hello</Text>
+                        <Card shadow="sm" p={1} radius="md" withBorder>
+                            <Card.Section>
+                                <Image
+                                    src="/people.png"
+                                    height={160}
+                                    alt="Norway"
+                                    fit="contain"
+                                />
+                            </Card.Section>
+
+                            <Text pt={10} weight={500} align="center">Personalplanung</Text>
+
+                            <Text size="sm" color="dimmed" align="center">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+                            </Text>
+
+                            <Button variant="light" color="red" fullWidth mt="md" radius="md">
+                                Jetzt planen
+                            </Button>
+                        </Card>
                     </Grid.Col>
                 </Grid>
             </motion.div>
