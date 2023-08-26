@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { createStyles, Header, Container, Group, Burger, Paper, Transition, Text } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { useRouter } from "next/router";
+import { DatabaseContext } from '../contexts/DatabaseContext';
 
 const HEADER_HEIGHT = 65;
 
@@ -83,17 +84,20 @@ interface HeaderResponsiveProps {
 export function HeaderResponsive({ links }: HeaderResponsiveProps) {
     const router = useRouter()
     const [opened, { toggle, close }] = useDisclosure(false);
+
     const [active, setActive] = useState(router.pathname);
+    const { activePage, setActivePage }: any = useContext(DatabaseContext)
+
     const { classes, cx } = useStyles();
 
     const items = links.map((link) => (
         <a
             key={link.label}
             href={link.link}
-            className={cx(classes.link, { [classes.linkActive]: active === link.link })}
+            className={cx(classes.link, { [classes.linkActive]: activePage === link.link })}
             onClick={(event) => {
                 event.preventDefault();
-                setActive(link.link);
+                setActivePage(link.link);
                 router.push(link.link)
                 close();
             }}
@@ -105,7 +109,13 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
     return (
         <Header height={HEADER_HEIGHT} className={classes.root}>
             <Container className={classes.header}>
-                <Text sx={{ cursor: "pointer" }} onClick={() => { router.push("/") }}>
+                <Text
+                    sx={{ cursor: "pointer" }}
+                    onClick={() => {
+                        router.push("/")
+                        setActivePage("/")
+                    }}
+                >
                     <Text component="span" variant="gradient" gradient={{ from: "#FF0000", to: "#FF7878" }} inherit>
                         Opti
                     </Text>

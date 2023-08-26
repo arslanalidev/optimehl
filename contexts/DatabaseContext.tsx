@@ -4,11 +4,11 @@ export const DatabaseContext = createContext(null);
 
 
 const DatabaseContextProvider = (props: any) => {
-    const [name, setName] = useState("Test");
+    const [ activePage, setActivePage] = useState("/");
 
 
     const value: any = {
-        name, setName,
+        activePage, setActivePage
     };
 
     return (

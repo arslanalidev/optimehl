@@ -4,10 +4,12 @@ import {
   Card, Container, Grid, Text, Title,
   Image, Button, Space
 } from '@mantine/core'
-import React from 'react'
+import React, { useContext } from 'react'
+import { DatabaseContext } from "../contexts/DatabaseContext";
 
 export default function Home() {
   const router = useRouter()
+  const { setActivePage }: any = useContext(DatabaseContext)
 
   return (
     <Container mih={"80vh"} mt={"5vh"}>
@@ -50,7 +52,10 @@ export default function Home() {
 
               <Button
                 variant="light" color="red" fullWidth mt="md" radius="md"
-                onClick={() => { router.push("/personal") }}
+                onClick={() => {
+                  router.push("/personal")
+                  setActivePage("/personal")
+                }}
               >
                 Personal planen
               </Button>
@@ -76,7 +81,10 @@ export default function Home() {
 
               <Button
                 variant="light" color="red" fullWidth mt="md" radius="md"
-                onClick={() => { router.push("/produktionsleitung") }}
+                onClick={() => {
+                  router.push("/produktionsleitung")
+                  setActivePage("/produktionsleitung")
+                }}
               >
                 Produktion planen
               </Button>
@@ -102,7 +110,10 @@ export default function Home() {
 
               <Button
                 variant="light" color="red" fullWidth mt="md" radius="md"
-                onClick={() => { router.push("/lagerwesen") }}
+                onClick={() => {
+                  router.push("/lagerwesen")
+                  setActivePage("/lagerwesen")
+                }}
               >
                 Waren bestellen
               </Button>
