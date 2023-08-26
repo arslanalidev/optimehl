@@ -2,7 +2,6 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { MantineProvider } from '@mantine/core';
 import Layout from '../components/Layout';
-import { Analytics } from '@vercel/analytics/react';
 import Head from 'next/head'
 import DatabaseContextProvider from '../contexts/DatabaseContext';
 
