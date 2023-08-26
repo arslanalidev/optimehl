@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useDisclosure } from '@mantine/hooks';
 import { Modal, useMantineTheme } from '@mantine/core';
 import EmployeeForm from './EmployeeForm';
@@ -11,7 +12,6 @@ const EmployeeModal = ({
   setCurrentUser
 }) => {
   const theme = useMantineTheme();
-
   const handleSubmit = (values) => {
     const updatedUser = {
       ...currentUser,

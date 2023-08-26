@@ -102,6 +102,7 @@ export function TableSelection({
         <td>
           <ActionIcon
             onClick={() => {
+              // @ts-ignore
               setCurrentUser(item);
               open();
             }}
