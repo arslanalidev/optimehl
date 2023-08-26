@@ -33,7 +33,7 @@ const Team = () => {
                 <Grid mb={30}>
                     <Grid.Col xs={12} md={8}>
                         <Text c={"dimmed"} fz="sm">
-                            At ShareRepair, we are driven by a passion for creating new and
+                            At OptiMehl, we are driven by a passion for creating new and
                             innovative solutions. We are always seeking out new opportunities
                             to learn and grow, and we know that by working together,
                             we can achieve even greater results.
@@ -51,47 +51,38 @@ const Team = () => {
                 <Grid>
                     <Grid.Col xs={12} md={6} lg={4}>
                         <PersonCard
-                            name={"Viet Duc Kieu"}
+                            name={"Maximilian Worzer"}
                             position={"Founding Team"}
-                            description={"DHBW | Software Engineering"}
+                            description={"Baker"}
                             image={"/duc.jpg"}
                             linkedin={"https://www.linkedin.com/in/viet-duc-kieu-58b498178/"}
                         />
                     </Grid.Col>
                     <Grid.Col xs={12} md={6} lg={4}>
                         <PersonCard
-                            name={"Philipp Scheuerer"}
+                            name={"Arslan Babbel"}
                             position={"Founding Team"}
-                            description={"OTH Regensburg | AI"}
-                            image={"/philip.jpg"}
-                            linkedin={"https://www.linkedin.com/in/philipp-scheuerer-824b3a238/"}
+                            description={"Developer"}
+                            image={"/duc.jpg"}
+                            linkedin={"https://www.linkedin.com/in/viet-duc-kieu-58b498178/"}
                         />
                     </Grid.Col>
                     <Grid.Col xs={12} md={6} lg={4}>
                         <PersonCard
-                            name={"David Pan"}
+                            name={"Patrick"}
                             position={"Founding Team"}
-                            description={"OTH Regensburg | Software Engineering"}
-                            image={"/david.jpg"}
-                            linkedin={"https://www.linkedin.com/in/david-pan-4196381bb/"}
+                            description={"Developer"}
+                            image={"/duc.jpg"}
+                            linkedin={"https://www.linkedin.com/in/viet-duc-kieu-58b498178/"}
                         />
                     </Grid.Col>
                     <Grid.Col xs={12} md={6} lg={4}>
                         <PersonCard
-                            name={"Abhishek Patel"}
+                            name={"Viet Duc Kieu"}
                             position={"Founding Team"}
-                            description={"Katholische Universität Ingolstadt | Data Science"}
-                            image={"/abi.jpg"}
-                            linkedin={"https://www.linkedin.com/in/abhishek-patel-ab9527246/"}
-                        />
-                    </Grid.Col>
-                    <Grid.Col xs={12} md={6} lg={4}>
-                        <PersonCard
-                            name={"Samantha Geller"}
-                            position={"Founding Team"}
-                            description={"University Regensburg | Media Informatik"}
-                            image={"/sam.jpg"}
-                            linkedin={"https://www.linkedin.com"}
+                            description={"Developer"}
+                            image={"/duc.jpg"}
+                            linkedin={"https://www.linkedin.com/in/viet-duc-kieu-58b498178/"}
                         />
                     </Grid.Col>
                 </Grid>

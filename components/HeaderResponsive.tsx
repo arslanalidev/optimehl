@@ -106,9 +106,9 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
         <Header height={HEADER_HEIGHT} className={classes.root}>
             <Container className={classes.header}>
                 <Text sx={{ cursor: "pointer" }} onClick={() => { router.push("/") }}>
-                    Share
+                    Opti
                     <Text component="span" c={"#00BF63"}>
-                        Repair
+                        Mehl
                     </Text>
                 </Text>
                 <Group spacing={5} className={classes.links}>

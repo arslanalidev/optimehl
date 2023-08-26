@@ -10,10 +10,6 @@ const Layout = ({ children }: any) => {
                 label: "Home"
             },
             {
-                link: "/concept",
-                label: "Concept"
-            },
-            {
                 link: "/team",
                 label: "Team"
             }]} />

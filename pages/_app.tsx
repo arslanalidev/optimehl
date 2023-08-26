@@ -22,16 +22,15 @@ export default function App({ Component, pageProps }: AppProps) {
         {/* layout contains header and footer */}
         <Layout>
           <Head>
-            <title>ShareRepair</title>
+            <title>OptiMehl</title>
             <meta name="description" content="lorem ipsum!" />
             <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
             <link
               rel="icon"
-              href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛠️</text></svg>"
+              href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥐</text></svg>"
             />
           </Head>
           <Component {...pageProps} />
-          <Analytics />
         </Layout>
       </DatabaseContextProvider>
     </MantineProvider>
