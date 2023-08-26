@@ -1,115 +1,44 @@
-import { Button, Center, Container, createStyles, Text } from '@mantine/core';
 import { motion } from "framer-motion";
 import { useRouter } from 'next/router';
-
-
-const BREAKPOINT = '@media (max-width: 755px)';
-
-const useStyles = createStyles((theme) => ({
-    wrapper: {
-        position: 'relative',
-        boxSizing: 'border-box',
-        backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white,
-        // set up min height
-        minHeight: "90vh",
-    },
-
-    inner: {
-        position: 'relative',
-        paddingTop: 110,
-        paddingBottom: 160,
-
-        [BREAKPOINT]: {
-            paddingBottom: 80,
-            paddingTop: 80,
-        },
-    },
-
-    title: {
-        fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-        fontSize: 60,
-        fontWeight: 900,
-        lineHeight: 1.1,
-        margin: 0,
-        padding: 0,
-        color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-        textAlign: "center",
-
-        [BREAKPOINT]: {
-            fontSize: 40,
-            lineHeight: 1.2,
-        },
-    },
-
-    description: {
-        marginTop: theme.spacing.xl,
-        marginBottom: theme.spacing.xl * 2,
-        maxWidth: 500,
-        fontSize: 22,
-        textAlign: "center",
-
-        [BREAKPOINT]: {
-            fontSize: 16,
-        },
-    },
-}));
-
-
+import { Container, Grid, Text, Title } from '@mantine/core'
+import React from 'react'
 
 export function HeroTitle() {
-    const { classes } = useStyles();
     const router = useRouter()
-
-    function handleClick(): void {
-        router.push("/tree");
-    }
 
 
     return (
-        <div className={classes.wrapper}>
-            <Container size={700} className={classes.inner}>
-                <motion.h1
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    className={classes.title}
-                >
-                    Optimiere deinen Backprozess {' '}
-                    <Text component="span" variant="gradient" gradient={{ from: "#FF0000", to: "#FF7878" }} inherit>
-                        
-                    </Text>{' '}
-                </motion.h1>
+        <Container mb={40} mih={"80vh"}>
+            <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+            >
+                <Title order={1} align="center" mt={"5vh"}>Bäckerei{" "}
+                    <Text component="span" variant="gradient" gradient={{ from: "#FF0000", to: "#FF7878" }}>
+                        Spontan
+                    </Text>
+                </Title>
+            </motion.div>
 
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 0.5, ease: "easeIn" }}
-                >
-                    <Center>
-                        <Text className={classes.description} color="dimmed">
-                            Optimehl - wo Technologie auf Tradition trifft.
-                        </Text>
-                    </Center>
-                </motion.div>
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5, ease: "easeIn" }}
+            >
+                <Grid>
+                    <Grid.Col xs={12} md={6} lg={4}>
+                        <Text>Hello</Text>
+                    </Grid.Col>
+                    <Grid.Col xs={12} md={6} lg={4}>
+                        <Text>Hello</Text>
+                    </Grid.Col>
+                    <Grid.Col xs={12} md={6} lg={4}>
+                        <Text>Hello</Text>
+                    </Grid.Col>
+                </Grid>
+            </motion.div>
 
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 0.7, ease: "easeIn" }}
-                >
-                    <Center>
-                        <Button
-                            onClick={handleClick}
-                            size="xl"
-                            // className={classes.control}
-                            type="submit"
-                        >
-                            Optimieren!
-                        </Button>
-                    </Center>
-                </motion.div>
-
-            </Container>
-        </div>
+        </Container>
     );
 }

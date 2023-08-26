@@ -68,7 +68,7 @@ const Tree = () => {
                     <Group>
                         <Button
                             variant="gradient"
-                            gradient={{ from: 'indigo', to: 'cyan' }}
+                            gradient={{ from: '#FF0000', to: '#FF7878' }}
                             onClick={open}
                             style={{ width: '150px' }}
                         >

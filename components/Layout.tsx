@@ -16,8 +16,8 @@ const Layout = ({ children }: any) => {
             <main>{children}</main>
             <FooterSimple links={[
                 {
-                    "link": "/team",
-                    "label": "Team"
+                    "link": "/impressum",
+                    "label": "Impressum"
                 },
             ]} />
         </>
