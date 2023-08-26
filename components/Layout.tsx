@@ -10,8 +10,16 @@ const Layout = ({ children }: any) => {
                 label: "Startseite"
             },
             {
-                link: "/team",
-                label: "Team"
+                link: "/personal",
+                label: "Personal"
+            },
+            {
+                link: "/produktionsleitung",
+                label: "Produktionsleitung"
+            },
+            {
+                link: "/lagerwesen",
+                label: "Lagerwesen"
             }]} />
             <main>{children}</main>
             <FooterSimple links={[
