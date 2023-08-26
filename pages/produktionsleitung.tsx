@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDisclosure } from '@mantine/hooks';
 import { Modal, Button, Table, Container, Paper } from '@mantine/core';
 import AddProduct from '../components/AddProduct';
+import BakeryFlow from '../components/BakeryFlow';
 
 const Produktionsleitung = () => {
     const [opened, { open, close }] = useDisclosure(false);
@@ -37,6 +38,7 @@ const Produktionsleitung = () => {
             </Paper>
 
             <Button onClick={open} style={{ marginTop: '20px' }}>Produkt hinzufügen</Button>
+            <BakeryFlow />
         </Container>
     );
 }
