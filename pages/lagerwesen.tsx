@@ -16,17 +16,17 @@ const Lagerwesen = () => {
             <Container mih={"80vh"} mt={"5vh"}>
                 <StatsGridIcons data={[
                     {
-                        "title": "Revenue",
-                        "value": "$13,456",
+                        "title": "Umsatz",
+                        "value": "€13,456",
                         "diff": 34
                     },
                     {
-                        "title": "Profit",
-                        "value": "$4,145",
+                        "title": "Gewinn",
+                        "value": "€4,145",
                         "diff": -13
                     },
                     {
-                        "title": "Coupons usage",
+                        "title": "Verwendete Gutscheine",
                         "value": "745",
                         "diff": 18
                     }

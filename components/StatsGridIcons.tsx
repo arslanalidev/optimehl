@@ -41,11 +41,11 @@ export function StatsGridIcons({ data }: StatsGridIconsProps) {
                         <DiffIcon size="1.8rem" stroke={1.5} />
                     </ThemeIcon>
                 </Group>
-                <Text c="dimmed" fz="sm" mt="md">
+                <Text c="dimmed" fz="xs" mt="md">
                     <Text component="span" c={stat.diff > 0 ? 'teal' : 'red'} fw={700}>
                         {stat.diff}%
                     </Text>{' '}
-                    {stat.diff > 0 ? 'increase' : 'decrease'} compared to last month
+                    {stat.diff > 0 ? 'Steigerung' : 'Abnahme'} im Vergleich zum letzten Monat
                 </Text>
             </Paper>
         );
