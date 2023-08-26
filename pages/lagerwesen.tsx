@@ -1,9 +1,10 @@
 import React from 'react'
 import { motion } from "framer-motion";
 import {
-    Container
+    Container, Space, Title
 } from '@mantine/core'
 import { StatsGridIcons } from '../components/StatsGridIcons'
+import { IngredientTable } from '../components/IngredientTable';
 
 const Lagerwesen = () => {
     return (
@@ -32,6 +33,60 @@ const Lagerwesen = () => {
                     }
                 ]
                 } />
+
+                <Space h={30} />
+
+                <IngredientTable data={[
+                    {
+                        "id": "1",
+                        "ingredient": "Weißmehl Type 550",
+                        "ist": "200 kg",
+                        "soll": "2000 kg",
+                        "buy": "1800 kg",
+                    },
+                    {
+                        "id": "2",
+                        "ingredient": "Roggenmehl Type 997",
+                        "ist": "220 kg",
+                        "soll": "2000 kg",
+                        "buy": "1780 kg",
+                    },
+                    {
+                        "id": "3",
+                        "ingredient": "Dinkelmehl Type 630",
+                        "ist": "180 kg",
+                        "soll": "2000 kg",
+                        "buy": "1820 kg",
+                    },
+                    {
+                        "id": "4",
+                        "ingredient": "Hefe",
+                        "ist": "10 kg",
+                        "soll": "50 kg",
+                        "buy": "40 kg",
+                    },
+                    {
+                        "id": "5",
+                        "ingredient": "Margarine",
+                        "ist": "10kg",
+                        "soll": "50kg",
+                        "buy": "40kg",
+                    },
+                    {
+                        "id": "6",
+                        "ingredient": "Eier",
+                        "ist": "5 kg",
+                        "soll": "40 kg",
+                        "buy": "35 kg",
+                    },
+                    {
+                        "id": "7",
+                        "ingredient": "Zucker",
+                        "ist": "25 kg",
+                        "soll": "50 kg",
+                        "buy": "25 kg",
+                    },
+                ]} />
             </Container>
         </motion.div>
     )
