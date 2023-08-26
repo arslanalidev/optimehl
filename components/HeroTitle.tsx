@@ -9,9 +9,8 @@ import React from 'react'
 export function HeroTitle() {
     const router = useRouter()
 
-
     return (
-        <Container mb={40} mih={"80vh"}>
+        <Container mih={"80vh"}>
             <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -24,12 +23,12 @@ export function HeroTitle() {
                 </Title>
             </motion.div>
 
-            <Space h={60} />
+            <Space h={70} />
 
             <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.5, ease: "easeIn" }}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4, ease: "easeIn" }}
             >
                 <Grid gutter={"xl"}>
                     <Grid.Col xs={12} md={6} lg={4}>
@@ -38,7 +37,7 @@ export function HeroTitle() {
                                 <Image
                                     src="/people.png"
                                     height={160}
-                                    alt="Norway"
+                                    alt="Menschenmenge"
                                     fit="contain"
                                 />
                             </Card.Section>
@@ -46,11 +45,11 @@ export function HeroTitle() {
                             <Text pt={10} weight={500} align="center">Personalplanung</Text>
 
                             <Text size="sm" color="dimmed" align="center">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+                                Mitarbeiter können ihren Dienstplan einsehen und Urlaub beantragen
                             </Text>
 
                             <Button variant="light" color="red" fullWidth mt="md" radius="md">
-                                Jetzt planen
+                                Personal planen
                             </Button>
                         </Card>
                     </Grid.Col>
@@ -59,21 +58,21 @@ export function HeroTitle() {
                         <Card shadow="sm" p={1} radius="md" withBorder>
                             <Card.Section>
                                 <Image
-                                    src="/people.png"
+                                    src="/production.png"
                                     height={160}
-                                    alt="Norway"
+                                    alt="Produktion"
                                     fit="contain"
                                 />
                             </Card.Section>
 
-                            <Text pt={10} weight={500} align="center">Personalplanung</Text>
+                            <Text pt={10} weight={500} align="center">Produktionsleitung</Text>
 
                             <Text size="sm" color="dimmed" align="center">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+                                Planung welche Produkte wann produziert werden sollen
                             </Text>
 
                             <Button variant="light" color="red" fullWidth mt="md" radius="md">
-                                Jetzt planen
+                                Produktion planen
                             </Button>
                         </Card>
                     </Grid.Col>
@@ -82,21 +81,21 @@ export function HeroTitle() {
                         <Card shadow="sm" p={1} radius="md" withBorder>
                             <Card.Section>
                                 <Image
-                                    src="/people.png"
+                                    src="/lager.png"
                                     height={160}
-                                    alt="Norway"
+                                    alt="Lager"
                                     fit="contain"
                                 />
                             </Card.Section>
 
-                            <Text pt={10} weight={500} align="center">Personalplanung</Text>
+                            <Text pt={10} weight={500} align="center">Lagerwesen</Text>
 
                             <Text size="sm" color="dimmed" align="center">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+                                Bestandverwaltung und Planung der Bestellungen
                             </Text>
 
                             <Button variant="light" color="red" fullWidth mt="md" radius="md">
-                                Jetzt planen
+                                Waren bestellen
                             </Button>
                         </Card>
                     </Grid.Col>
