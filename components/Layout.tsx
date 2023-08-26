@@ -7,7 +7,7 @@ const Layout = ({ children }: any) => {
         <>
             <HeaderResponsive links={[{
                 link: "/",
-                label: "Home"
+                label: "Startseite"
             },
             {
                 link: "/team",

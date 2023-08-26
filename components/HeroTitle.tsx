@@ -1,8 +1,6 @@
-import { Button, Center, Container, createStyles, Text, ActionIcon } from '@mantine/core';
+import { Button, Center, Container, createStyles, Text } from '@mantine/core';
 import { motion } from "framer-motion";
 import { useRouter } from 'next/router';
-import { IconChevronDown } from '@tabler/icons';
-import { useScrollIntoView } from '@mantine/hooks';
 
 
 const BREAKPOINT = '@media (max-width: 755px)';
@@ -76,9 +74,9 @@ export function HeroTitle() {
                     transition={{ duration: 0.8 }}
                     className={classes.title}
                 >
-                    Repair instead of{' '}
-                    <Text component="span" variant="gradient" gradient={{ from: "#FFFF00", to: "#FF1A1A" }} inherit>
-                        Throwing Away
+                    Optimiere deinen Backprozess {' '}
+                    <Text component="span" variant="gradient" gradient={{ from: "#FF0000", to: "#FF7878" }} inherit>
+                        
                     </Text>{' '}
                 </motion.h1>
 
@@ -89,7 +87,7 @@ export function HeroTitle() {
                 >
                     <Center>
                         <Text className={classes.description} color="dimmed">
-                            Some cool slogan
+                            Optimehl - wo Technologie auf Tradition trifft.
                         </Text>
                     </Center>
                 </motion.div>
