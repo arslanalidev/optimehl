@@ -16,10 +16,11 @@ import 'reactflow/dist/style.css';
 
 
 const initialNodes = [
-    { id: '1', type: "input", position: { x: 100, y: 150 }, data: { label: 'Brezeln' }, sourcePosition: 'right' },
-    { id: '2', position: { x: 300, y: 150 }, data: { label: 'Semmeln' }, sourcePosition: 'right', targetPosition: 'left' },
-    { id: '3', position: { x: 500, y: 150 }, data: { label: 'Croissant' }, sourcePosition: 'right', targetPosition: 'left' },
-    { id: '4', position: { x: 700, y: 150 }, data: { label: 'Franzbrötchen' }, sourcePosition: 'right', targetPosition: 'left' },
+    { id: '1', type: "input", position: { x: 100, y: 150 }, data: { label: 'Brezeln' } },
+    { id: '2', position: { x: 300, y: 150 }, data: { label: 'Semmeln' } },
+    { id: '3', position: { x: 500, y: 150 }, data: { label: 'Croissant' } },
+    { id: '4', position: { x: 700, y: 150 }, data: { label: 'Franzbrötchen' } },
+    // { id: '4', position: { x: 700, y: 150 }, data: { label: 'Franzbrötchen' }, sourcePosition: 'right', targetPosition: 'left' },
 ];
 const initialEdges = [
     { id: 'e1-2', source: '1', target: '2', type: 'smoothstep', animated: true },
