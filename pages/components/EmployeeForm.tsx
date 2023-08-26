@@ -72,7 +72,7 @@ const EmployeeForm = ({ employee, handleSubmit }: { employee: Employee }) => {
           {...form.getInputProps('availabilityTomorrow')}
         />
         <Group position="right" mt="md">
-          <Button type="submit">Submit</Button>
+          <Button type="submit">Ändern</Button>
         </Group>
       </form>
     </Box>
