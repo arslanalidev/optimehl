@@ -2,7 +2,7 @@ import { Table, ScrollArea, Group, Text, Button } from '@mantine/core';
 import { useState } from 'react';
 
 interface TableSelectionProps {
-    data: { id: string, ingredient: string; ist: string; soll: string, buy: string }[];
+    data: { id: string, ingredient: string; ist: string; soll: string, buy: string, lowcolor?: string }[];
 }
 
 function TableRow({ item }: any) {
@@ -17,7 +17,7 @@ function TableRow({ item }: any) {
                     </Text>
                 </Group>
             </td>
-            <td>{item.ist}</td>
+            <td><Text c={item.lowcolor}>{item.ist}</Text></td>
             <td>{item.soll}</td>
             <td>{item.buy}</td>
             <td>
