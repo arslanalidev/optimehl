@@ -18,8 +18,7 @@ const AddProduct = ({ onAddProduct }) => {
             <Select
                 mt="md"
                 data={['Brezeln', 'Körnerbrötchen', 'Mürbeteiggebäck', 'Weizenbrötchen', 'Vollkornbrötchen']}
-                placeholder="Pick one"
-                label="Your favorite library/framework"
+                placeholder="Auswählen"
                 value={selectedProduct}
                 onChange={(value) => setSelectedProduct(value)}
             />
@@ -33,7 +32,7 @@ const AddProduct = ({ onAddProduct }) => {
                 onClick={handleSubmit}
                 style={{marginTop: '20px'}}
             >
-                Click
+                Produkt hinzufügen
             </Button>
         </div>
     );
