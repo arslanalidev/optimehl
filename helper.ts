@@ -1,123 +1,169 @@
 import { Task } from 'gantt-task-react';
 
 export function initBakerWorkday() {
-  const currentDate = new Date();
-  const tasks: Task[] = [
-    // Baker's Project
+  const aktuellesDatum = new Date();
+  const aufgaben: Task[] = [
+    // Bäckerei Projekt
     {
       start: new Date(
-        currentDate.getFullYear(),
-        currentDate.getMonth(),
-        currentDate.getDate(),
+        aktuellesDatum.getFullYear(),
+        aktuellesDatum.getMonth(),
+        aktuellesDatum.getDate(),
         1,
         0
-      ), // 1:00 AM
+      ),
       end: new Date(
-        currentDate.getFullYear(),
-        currentDate.getMonth(),
-        currentDate.getDate() + 1,
+        aktuellesDatum.getFullYear(),
+        aktuellesDatum.getMonth(),
+        aktuellesDatum.getDate() + 1,
         23,
         0
-      ), // 11:00 PM next day
-      name: 'Baker',
-      id: 'BakerProject',
-      progress: 0,
-      type: 'project',
-      hideChildren: false,
-      displayOrder: 1
+      ),
+      name: 'Bäckerei',
+      id: 'BaeckereiProjekt',
+      fortschritt: 0,
+      typ: 'projekt',
+      kinderVerstecken: false,
+      anzeigeReihenfolge: 1
     },
-    // Baker's Shift 1
+    // Mitarbeiter 1 - Brezeln
     {
       start: new Date(
-        currentDate.getFullYear(),
-        currentDate.getMonth(),
-        currentDate.getDate(),
+        aktuellesDatum.getFullYear(),
+        aktuellesDatum.getMonth(),
+        aktuellesDatum.getDate(),
         1,
         0
-      ), // 1:00 AM
+      ),
       end: new Date(
-        currentDate.getFullYear(),
-        currentDate.getMonth(),
-        currentDate.getDate(),
-        4,
-        0
-      ), // 4:00 AM
-      name: 'Baker Shift 1',
-      id: 'BakerShift1',
-      progress: 0,
-      type: 'task',
-      project: 'BakerProject',
-      displayOrder: 2
-    },
-    // Baker's Shift 2
-    {
-      start: new Date(
-        currentDate.getFullYear(),
-        currentDate.getMonth(),
-        currentDate.getDate(),
-        6,
-        0
-      ), // 6:00 AM
-      end: new Date(
-        currentDate.getFullYear(),
-        currentDate.getMonth(),
-        currentDate.getDate() + 1,
+        aktuellesDatum.getFullYear(),
+        aktuellesDatum.getMonth(),
+        aktuellesDatum.getDate(),
         3,
         0
-      ), // 3:00 AM next day
-      name: 'Baker Shift 2',
-      id: 'BakerShift2',
-      progress: 0,
-      type: 'task',
-      project: 'BakerProject',
-      displayOrder: 3
+      ),
+      name: 'Mitarbeiter 1 - Brezeln',
+      id: 'Mitarbeiter1Brezeln',
+      fortschritt: 0,
+      typ: 'aufgabe',
+      projekt: 'BaeckereiProjekt',
+      anzeigeReihenfolge: 2
     },
-    // Employee 1
+    // Mitarbeiter 1 - Körnerbrötchen
     {
       start: new Date(
-        currentDate.getFullYear(),
-        currentDate.getMonth(),
-        currentDate.getDate(),
-        2,
+        aktuellesDatum.getFullYear(),
+        aktuellesDatum.getMonth(),
+        aktuellesDatum.getDate(),
+        3,
         0
-      ), // 2:00 AM
+      ),
       end: new Date(
-        currentDate.getFullYear(),
-        currentDate.getMonth(),
-        currentDate.getDate(),
+        aktuellesDatum.getFullYear(),
+        aktuellesDatum.getMonth(),
+        aktuellesDatum.getDate(),
         5,
         0
-      ), // 5:00 AM
-      name: 'Employee 1',
-      id: 'Employee1',
-      progress: 0,
-      type: 'task',
-      project: 'BakerProject',
-      displayOrder: 4
+      ),
+      name: 'Mitarbeiter 1 - Körnerbrötchen',
+      id: 'Mitarbeiter1Broetchen',
+      fortschritt: 0,
+      typ: 'aufgabe',
+      projekt: 'BaeckereiProjekt',
+      anzeigeReihenfolge: 3
     },
-    // Employee 2
+    // Mitarbeiter 2 - Mürbeteigböden
     {
       start: new Date(
-        currentDate.getFullYear(),
-        currentDate.getMonth(),
-        currentDate.getDate(),
-        4,
+        aktuellesDatum.getFullYear(),
+        aktuellesDatum.getMonth(),
+        aktuellesDatum.getDate(),
+        5,
         0
-      ), // 4:00 AM
+      ),
       end: new Date(
-        currentDate.getFullYear(),
-        currentDate.getMonth(),
-        currentDate.getDate(),
+        aktuellesDatum.getFullYear(),
+        aktuellesDatum.getMonth(),
+        aktuellesDatum.getDate(),
         7,
         0
-      ), // 7:00 AM
-      name: 'Employee 2',
-      id: 'Employee2',
-      progress: 0,
-      type: 'task',
-      project: 'BakerProject',
-      displayOrder: 5
+      ),
+      name: 'Mitarbeiter 2 - Mürbeteigböden',
+      id: 'Mitarbeiter2Teigboeden',
+      fortschritt: 0,
+      typ: 'aufgabe',
+      projekt: 'BaeckereiProjekt',
+      anzeigeReihenfolge: 4
+    },
+    // Teigkneter
+    {
+      start: new Date(
+        aktuellesDatum.getFullYear(),
+        aktuellesDatum.getMonth(),
+        aktuellesDatum.getDate(),
+        7,
+        0
+      ),
+      end: new Date(
+        aktuellesDatum.getFullYear(),
+        aktuellesDatum.getMonth(),
+        aktuellesDatum.getDate(),
+        8,
+        0
+      ),
+      name: 'Teigkneter',
+      id: 'Teigkneter',
+      fortschritt: 0,
+      typ: 'aufgabe',
+      projekt: 'BaeckereiProjekt',
+      anzeigeReihenfolge: 5
+    },
+    // Teigteiler
+    {
+      start: new Date(
+        aktuellesDatum.getFullYear(),
+        aktuellesDatum.getMonth(),
+        aktuellesDatum.getDate(),
+        8,
+        0
+      ),
+      end: new Date(
+        aktuellesDatum.getFullYear(),
+        aktuellesDatum.getMonth(),
+        aktuellesDatum.getDate(),
+        9,
+        0
+      ),
+      name: 'Teigteiler',
+      id: 'Teigteiler',
+      fortschritt: 0,
+      typ: 'aufgabe',
+      projekt: 'BaeckereiProjekt',
+      anzeigeReihenfolge: 6
+    },
+    // Stikkeofen
+    {
+      start: new Date(
+        aktuellesDatum.getFullYear(),
+        aktuellesDatum.getMonth(),
+        aktuellesDatum.getDate(),
+        9,
+        0
+      ),
+      end: new Date(
+        aktuellesDatum.getFullYear(),
+        aktuellesDatum.getMonth(),
+        aktuellesDatum.getDate(),
+        11,
+        0
+      ),
+      name: 'Stikkenofen',
+      id: 'Stikkbeofen',
+      fortschritt: 0,
+      typ: 'aufgabe',
+      projekt: 'BaeckereiProjekt',
+      anzeigeReihenfolge: 7
     }
   ];
-  return tasks;
+  return aufgaben;
 }

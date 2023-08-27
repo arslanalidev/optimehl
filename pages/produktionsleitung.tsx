@@ -123,9 +123,9 @@ const Produktionsleitung = () => {
       </Button>
       <h3>Produktionsplan</h3>
 
-      {/* {hasProduct('Brezeln') &&
+      {hasProduct('Brezeln') &&
       hasProduct('Körnerbrötchen') &&
-      hasProduct('Mürbeteigboden') ? ( */}
+      hasProduct('Mürbeteigboden') ? (
       <Gantt
         tasks={tasks}
         viewMode={view}
@@ -139,7 +139,7 @@ const Produktionsleitung = () => {
         listCellWidth={isChecked ? '155px' : ''}
         columnWidth={columnWidth}
       />
-      {/* ) : null} */}
+      ) : null}
 
       {/* <BakeryFlow /> */}
     </Container>
