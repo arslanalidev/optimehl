@@ -20,7 +20,7 @@ const AddProduct = ({ onAddProduct }: { onAddProduct: Function }) => {
         data={[
           'Brezeln',
           'Körnerbrötchen',
-          'Mürbeteiggebäck',
+          'Mürbeteigboden',
           'Weizenbrötchen',
           'Vollkornbrötchen'
         ]}
