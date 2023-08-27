@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Task } from 'gantt-task-react';
 
 export function initBakerWorkday() {
