@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useDisclosure } from '@mantine/hooks';
 import { Modal, Button, Table, Container, Paper } from '@mantine/core';
 import AddProduct from '../components/AddProduct';
-import { getStartEndDateForProject, initTasks } from '../helper';
+import { getStartEndDateForProject, initBakerWorkday } from '../helper';
 // import BakeryFlow from '../components/BakeryFlow';
 import {
   Gantt,
@@ -20,7 +20,7 @@ const Produktionsleitung = () => {
   const [products, setProducts] = useState([]);
 
   const [view, setView] = React.useState<ViewMode>(ViewMode.Hour);
-  const [tasks, setTasks] = React.useState<Task[]>(initTasks());
+  const [tasks, setTasks] = React.useState<Task[]>(initBakerWorkday());
   const [isChecked, setIsChecked] = React.useState(true);
   let columnWidth = 65;
   if (view === ViewMode.Year) {
@@ -123,23 +123,23 @@ const Produktionsleitung = () => {
       </Button>
       <h3>Produktionsplan</h3>
 
-      {hasProduct('Brezeln') &&
+      {/* {hasProduct('Brezeln') &&
       hasProduct('Körnerbrötchen') &&
-      hasProduct('Mürbeteigboden') ? (
-        <Gantt
-          tasks={tasks}
-          viewMode={view}
-          onDateChange={handleTaskChange}
-          onDelete={handleTaskDelete}
-          onProgressChange={handleProgressChange}
-          onDoubleClick={handleDblClick}
-          onClick={handleClick}
-          onSelect={handleSelect}
-          onExpanderClick={handleExpanderClick}
-          listCellWidth={isChecked ? '155px' : ''}
-          columnWidth={columnWidth}
-        />
-      ) : null}
+      hasProduct('Mürbeteigboden') ? ( */}
+      <Gantt
+        tasks={tasks}
+        viewMode={view}
+        onDateChange={handleTaskChange}
+        onDelete={handleTaskDelete}
+        onProgressChange={handleProgressChange}
+        onDoubleClick={handleDblClick}
+        onClick={handleClick}
+        onSelect={handleSelect}
+        onExpanderClick={handleExpanderClick}
+        listCellWidth={isChecked ? '155px' : ''}
+        columnWidth={columnWidth}
+      />
+      {/* ) : null} */}
 
       {/* <BakeryFlow /> */}
     </Container>

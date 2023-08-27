@@ -1,120 +1,123 @@
 import { Task } from 'gantt-task-react';
 
-export function initTasks() {
+export function initBakerWorkday() {
   const currentDate = new Date();
   const tasks: Task[] = [
+    // Baker's Project
     {
       start: new Date(
         currentDate.getFullYear(),
         currentDate.getMonth(),
-        currentDate.getDay()
-      ),
-      end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 15),
-      name: 'Brezel',
-      id: 'Brezel1',
-      progress: 25,
+        currentDate.getDate(),
+        1,
+        0
+      ), // 1:00 AM
+      end: new Date(
+        currentDate.getFullYear(),
+        currentDate.getMonth(),
+        currentDate.getDate() + 1,
+        23,
+        0
+      ), // 11:00 PM next day
+      name: 'Baker',
+      id: 'BakerProject',
+      progress: 0,
       type: 'project',
       hideChildren: false,
       displayOrder: 1
     },
+    // Baker's Shift 1
     {
-      start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 1),
+      start: new Date(
+        currentDate.getFullYear(),
+        currentDate.getMonth(),
+        currentDate.getDate(),
+        1,
+        0
+      ), // 1:00 AM
       end: new Date(
         currentDate.getFullYear(),
         currentDate.getMonth(),
-        2,
-        12,
-        28
-      ),
-      name: 'Teigkneter',
-      id: 'Brezel-Teigkneter',
-      progress: 45,
+        currentDate.getDate(),
+        4,
+        0
+      ), // 4:00 AM
+      name: 'Baker Shift 1',
+      id: 'BakerShift1',
+      progress: 0,
       type: 'task',
-      project: 'Brezel1',
+      project: 'BakerProject',
       displayOrder: 2
     },
+    // Baker's Shift 2
     {
-      start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 2),
-      end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 4, 0, 0),
-      name: 'Teigteiler',
-      id: 'Brezel-Teigteiler',
-      progress: 25,
-      dependencies: ['Brezel-Teigkneter'],
+      start: new Date(
+        currentDate.getFullYear(),
+        currentDate.getMonth(),
+        currentDate.getDate(),
+        6,
+        0
+      ), // 6:00 AM
+      end: new Date(
+        currentDate.getFullYear(),
+        currentDate.getMonth(),
+        currentDate.getDate() + 1,
+        3,
+        0
+      ), // 3:00 AM next day
+      name: 'Baker Shift 2',
+      id: 'BakerShift2',
+      progress: 0,
       type: 'task',
-      project: 'Brezel1',
+      project: 'BakerProject',
       displayOrder: 3
     },
+    // Employee 1
     {
-      start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 4),
-      end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 8, 0, 0),
-      name: 'Ofen',
-      id: 'Brezel-Ofen',
-      progress: 30,
-      dependencies: ['Brezel-Teigteiler'],
+      start: new Date(
+        currentDate.getFullYear(),
+        currentDate.getMonth(),
+        currentDate.getDate(),
+        2,
+        0
+      ), // 2:00 AM
+      end: new Date(
+        currentDate.getFullYear(),
+        currentDate.getMonth(),
+        currentDate.getDate(),
+        5,
+        0
+      ), // 5:00 AM
+      name: 'Employee 1',
+      id: 'Employee1',
+      progress: 0,
       type: 'task',
-      project: 'Brezel1',
+      project: 'BakerProject',
       displayOrder: 4
     },
+    // Employee 2
     {
-      start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 8),
-      end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 9, 0, 0),
-      name: 'Körnerbrötchen',
-      id: 'Körnerbrötchen1',
-      progress: 30,
-      dependencies: [''],
-      type: 'project',
-      displayOrder: 5,
-      hideChildren: false
-    },
-    {
-      start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 8),
-      end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 10),
-      name: 'Teigkneter',
-      id: 'Körnerbrötchen-Teigkneter',
+      start: new Date(
+        currentDate.getFullYear(),
+        currentDate.getMonth(),
+        currentDate.getDate(),
+        4,
+        0
+      ), // 4:00 AM
+      end: new Date(
+        currentDate.getFullYear(),
+        currentDate.getMonth(),
+        currentDate.getDate(),
+        7,
+        0
+      ), // 7:00 AM
+      name: 'Employee 2',
+      id: 'Employee2',
+      progress: 0,
       type: 'task',
-      progress: 70,
-      project: 'Körnerbrötchen1',
-      displayOrder: 6
-    },
-    {
-      start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 15),
-      end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 15),
-      name: 'Teigteiler',
-      id: 'Körnerbrötchen-Teigteiler',
-      progress: 30,
-      type: 'task',
-      dependencies: ['Körnerbrötchen-Teigkneter'],
-      project: 'Körnerbrötchen1',
-      displayOrder: 7
-    },
-    {
-      start: new Date(currentDate.getFullYear(), currentDate.getMonth(), 15),
-      end: new Date(currentDate.getFullYear(), currentDate.getMonth(), 15),
-      name: 'Ofen',
-      id: 'Körnerbrötchen-Ofen',
-      progress: currentDate.getMonth(),
-      type: 'task',
-      dependencies: ['Körnerbrötchen-Teigteiler'],
-      project: 'Körnerbrötchen1',
-      displayOrder: 8
+      project: 'BakerProject',
+      displayOrder: 5
     }
   ];
   return tasks;
-}
-
-export function getStartEndDateForProject(tasks: Task[], projectId: string) {
-  const projectTasks = tasks.filter((t) => t.project === projectId);
-  let start = projectTasks[0].start;
-  let end = projectTasks[0].end;
-
-  for (let i = 0; i < projectTasks.length; i++) {
-    const task = projectTasks[i];
-    if (start.getTime() > task.start.getTime()) {
-      start = task.start;
-    }
-    if (end.getTime() < task.end.getTime()) {
-      end = task.end;
-    }
-  }
-  return [start, end];
 }
